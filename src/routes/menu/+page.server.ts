@@ -16,7 +16,6 @@ export const load: PageServerLoad = async ({ params }) => {
         const results = await response.json();
         return results
     };
-    
     const items = await getData('menu_item', token);
     const cats = await getData('menu_category', token);
     return{
