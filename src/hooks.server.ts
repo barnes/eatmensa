@@ -38,4 +38,4 @@ export const getPages = async (token) => {
 
 
 export const token = await getToken();
-// export const pages = await getPages(token);
+export const pages = await getPages(token);

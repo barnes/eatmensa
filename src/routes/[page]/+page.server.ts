@@ -1,9 +1,10 @@
 import type { PageServerLoad } from '$lib/types';
-import { getToken, getPages} from '../../hooks.server';
+import { getToken, getPages, pages} from '../../hooks.server';
 
 export const load: PageServerLoad = async ({ params }) => {
+    console.log('LOADING PAGE DATa')
     const token = await getToken();
-    const pages = await getPages(token);
+    // const pages = await getPages(token);
     // console.log(pages);
     const filteredPage = (pages.filter(page => page.slug === params.page));
     const id = filteredPage[0].id;
@@ -23,7 +24,7 @@ export const load: PageServerLoad = async ({ params }) => {
         return results
     };
 
-    const results = getData('pages', token, id);
+    const results = await getData('pages', token, id);
     return{
         results
     }
