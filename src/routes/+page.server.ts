@@ -1,9 +1,10 @@
 import type { PageServerLoad } from '$lib/types';
-import { token, pages} from '../../hooks.server';
+import { token } from '../hooks.server';
+
+// Getting the home page directly from the ID.
 
 export const load: PageServerLoad = async ({ params }) => {
-    const filteredPage = (pages.filter(page => page.slug === params.page));
-    const id = filteredPage[0].id;
+    const id = '23';
     const getData = async (endPoint: string, token: string, id: string) => {
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
