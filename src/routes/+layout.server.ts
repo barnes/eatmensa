@@ -1,6 +1,7 @@
-
+// Get the pages from hooks, and pass them to the layout
 import type { PageServerLoad } from '$lib/types';
-import { getPages, getToken, pages } from '../hooks.server';
+import { pages } from '../hooks.server';
+export const prerender = true;
 export const load: PageServerLoad = async ({ params }) => {
     return {
         pages
