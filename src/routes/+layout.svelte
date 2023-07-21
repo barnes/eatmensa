@@ -7,19 +7,24 @@
 	
 
 </script>
-
-<section class="container-fluid">
+<header class="container">
 	<nav>
 		<ul><h1>Mensa</h1></ul>
 			<MobileMenu data={data} />
 			<Menu data={data} />
 	</nav>
+</header>
+
+<main class="container">
 	<slot />
-</section>
+</main>
+
+<footer class="container">
+	<p>© 2021 Mensa</p>
+</footer>
+
 
 <style>
-	.container-fluid {
-		padding: 1rem 0 0 0;
-	}
+	
 </style>
 	

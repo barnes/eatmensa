@@ -6,7 +6,7 @@
     }
 </script>
 
-<a class="menu" on:click={toggleMenu} class:hide={open == false}>🍔</a>
+<span class="menu" on:click={toggleMenu} class:hide={open == false}>🍔</span>
 
 <div class="mobile-menu" class:open>
     <ul>
@@ -48,10 +48,13 @@
     }
     .mobile-menu {
         background-color: green;
-        width: 100%;
+        width:100%;
         height: 100%;
         position: absolute;
-        left:0;
+        right:0;
         transition: left 0.5s;
+        margin:0;
+        padding: 0;
+        border: none
     }
 </style>
