@@ -10,8 +10,8 @@
 <header class="container">
 	<nav>
 		<ul><h1>Mensa</h1></ul>
-			<MobileMenu data={data} />
-			<Menu data={data} />
+		<Menu data={data} />
+		<MobileMenu data={data} />
 	</nav>
 </header>
 
